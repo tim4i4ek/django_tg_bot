@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments (Виртуальные окружения)
+.venv/
+venv/
+env/
+ENV/
+
+# Секретные данные (КРИТИЧЕСКИ ВАЖНО)
+.env
+db.sqlite3
+
+# Django stuff
+local_settings.py
+staticfiles/
+media/
+
+# macOS stuff (так как ты на MacBook)
+.DS_Store
+
+# IDE stuff (настройки редакторов)
+.vscode/
+.idea/
+
+# Logs
+*.log
