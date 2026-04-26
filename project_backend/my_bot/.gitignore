@@ -10,7 +10,7 @@ env/
 ENV/
 
 # Секретные данные (КРИТИЧЕСКИ ВАЖНО)
-.env
+../.env
 db.sqlite3
 
 # Django stuff

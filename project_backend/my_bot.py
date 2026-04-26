@@ -13,7 +13,7 @@ django.setup()
 from my_bot.models import Service
 
 
-TOKEN = "8733279636:AAFhZ3sQ26IBUtZYyUidiEZLUEpE-aChQlo"
+TOKEN = "8733279636:AAG9K0i8Oq4mkVulv_xQdOJDIoPf7SVEYf8"
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
