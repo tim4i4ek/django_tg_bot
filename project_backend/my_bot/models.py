@@ -50,7 +50,7 @@ class Appointment(models.Model):
     date = models.DateField(verbose_name="Дата запису")
     time_slot = models.IntegerField(verbose_name="Година запису")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата створення запису")
-    is_aproved = models.BooleanField()
+    is_approved = models.BooleanField()
 
     def __str__(self):
         return f"{self.date} о {self.time_slot}:00 — {self.client_name}"
