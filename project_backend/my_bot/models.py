@@ -17,5 +17,21 @@ class WorkingDay(models.Model):
         return f"{self.get_day_of_week_display()}: {self.start_time}-{self.end_time}"
 
     class Meta:
-        verbose_name = "Графік роботи"
-        verbose_name_plural = "Графіки роботи"
+        verbose_name = "Послуга"
+        verbose_name_plural = "Послуги"
+
+class Appointment(models.Model):
+    # Запис клієнта на конкретну дату і час
+    client_name = models.CharField(max_length=100, verbose_name="Ім'я клієнта")
+    client_tg_id = models.BigIntegerField(verbose_name="Telegram ID")
+    service = models.ForeignKey(Service, on_delete=models.PROTECT, verbose_name="Послуга")
+    date = models.DateField(verbose_name="Дата запису")
+    time_slot = models.IntegerField(verbose_name="Година запису")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата створення запису")
+
+    def __str__(self):
+        return f"{self.date} о {self.time_slot}:00 — {self.client_name}"
+
+    class Meta:
+        verbose_name = "Запис"
+        verbose_name_plural = "Записи"
