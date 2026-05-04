@@ -32,3 +32,5 @@ def get_free_hours_for_date(date_str):
         return []
 
     return working_day.get_available_slots(target_date)
+
+print("hi")
